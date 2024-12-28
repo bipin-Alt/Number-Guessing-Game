@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <!--Styling-->
+    <link rel="stylesheet" href="GuessNum.css">
+</head>
+<body>
+       <!--Game Container-->
+    <section class="game-container">
+        <section class="title-timer">
+            <div class="titles">
+                <!--titles-->
+              <h2>Number Guessing Game</h2>
+              <h3>Feeling Bored? Hang out here!</h3>
+              <p>Guess a number between 0 and 100</p>
+           </div>
+          </section>
+       <section class="input-output">
+         <!--Input and Output-->
+         <div class="input-container">
+             <input type="number" id="guess-input" placeholder="Enter your guess" min="1" max="100">
+             <button id="guess-btn">Guess</button>
+            </div>
+            <div class="output-container">
+             <p class="alert-wrong">
+             </p>
+             <p class="alert-right">
+             </p>
+            </div>
+       </section>
+    </section>
+    <!--JavaScript-->
+<script src="GuessNum.JS"></script>
+</body>
+</html>

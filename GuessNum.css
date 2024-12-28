@@ -1,0 +1,113 @@
+ /* Declaration of variables*/
+  :root{
+    --background-color : #669bbc;
+    --text-color : #ffffffa9;
+    --font-family : "georgia", "sans-serif";
+    --border-radius:5px;
+    --box-shadow :  0 0rem 5rem #dda15e;
+    --box-shadow-hover: 0 0rem 10rem #dda15e;
+    --transition: all 0.3s ease, color 0.3s ease;
+    --button-background:#03045e;
+    --button-hover:#023e8a;
+    --button-text: #ffffff;
+    --button-border: none;
+    --letter-spacing: .25rem;
+  }
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* styles for game container */
+.game-container{
+    width: 80%;
+    margin: 0 auto;
+    padding:2rem;
+    margin-top: 7rem;
+    background-color: var(--background-color);
+    font-family: var(--font-family);
+    box-shadow: var(--box-shadow);
+    color:var(--text-color);
+    text-align: center;
+}
+
+.game-container:hover{
+    box-shadow: var(--box-shadow-hover);
+}
+
+/* styles for game board */
+.titles{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    line-height:2rem;
+
+}
+.titles h2{
+    letter-spacing:var(--letter-spacing);
+}
+.titles p{
+    margin-bottom: 0.5rem;
+    letter-spacing:var(--letter-spacing);
+}
+/* styles for timer*/
+
+.timer{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+/*styling the inputs */
+.input-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:2rem;
+}
+#guess-input{
+    width:15rem;
+    height:2rem;
+    font-size:1.1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   border:transparent;
+}
+
+/* styling the buttons */
+
+#guess-btn{
+    padding: .5rem 1rem;
+    background-color: var(--button-background);
+    color: grey;
+    border: var(--button-border);
+    border-radius: var(--border-radius);
+    cursor:pointer;
+    transition: all 0.3s ease;
+    font-size:1rem;
+    letter-spacing: var(--letter-spacing);
+}
+
+#guess-btn:hover{
+    background-color: var(--button-hover);
+    color: var(--button-text);
+}
+
+/* styling the results */
+
+.alert-wrong{
+    font-size: 1.01rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    background-color: wheat;
+    color: red;
+    letter-spacing:var(--letter-spacing);
+}
+.alert-right{
+    font-size: 1.01rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    background-color: rgb(255, 255, 255);
+    color: green;
+    letter-spacing:var(--letter-spacing);
+}
