@@ -17,7 +17,8 @@ const userInput = () =>{
         alertWrong.textContent="";
     }, 3000);
 //if the user input is less than 0 and greater than 100//
-}else if(userInputValue < 0 || userInputValue > 100){
+}
+else if(userInputValue < 0 || userInputValue > 100){
     alertWrong.textContent ="Please enter a Number between 0 and 100!";
     alertRight.style.display ="none";
     //Hide the wrong alert after 3 seconds//
@@ -25,7 +26,38 @@ const userInput = () =>{
         alertWrong.textContent="";
     }, 3000);
     //if the user input is not equal to random number//
-}else if(userInputValue !== randomNumber){
+}
+else if(randomNumber > 50 && userInputValue < 50 && randomNumber !==userInputValue ){
+    alertWrong.textContent ="Try again, using a number greater than 50";
+    setTimeout(()=>{
+        alertWrong.textContent="";
+    }, 3000);
+}
+else if(randomNumber > 80 && userInputValue < 80 && randomNumber !==userInputValue ){
+    alertWrong.textContent ="Try again, using a number greater than 80";
+    setTimeout(()=>{
+        alertWrong.textContent="";
+    }, 3000);
+}
+else if(randomNumber <50 && userInputValue > 50 && randomNumber !==userInputValue ){
+    alertWrong.textContent ="Try again, using a number smaller than 50";
+    setTimeout(()=>{
+        alertWrong.textContent="";
+    }, 3000);
+}
+else if(randomNumber < 10 && userInputValue > 10 && randomNumber !==userInputValue ){
+    alertWrong.textContent ="Try again using a another number smaller than 10";
+    setTimeout(()=>{
+        alertWrong.textContent="";
+    }, 3000);
+}
+else if(randomNumber > 90 && userInputValue < 30 && randomNumber !==userInputValue ){
+    alertWrong.textContent ="Try again using a another number greater than 90";
+    setTimeout(()=>{
+        alertWrong.textContent="";
+    }, 3000);
+}
+else if(userInputValue !== randomNumber){
     alertWrong.textContent ="Ops! You guess it Wrong!";
     alertRight.style.display ="none";
     //hide the wrong alert after 3 seconds//
